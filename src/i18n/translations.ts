@@ -56,7 +56,7 @@ const en: Translations = {
   },
   hero: {
     greeting: 'Hello, I\'m',
-    name: 'Kathrin Möckl',
+    name: '{Name}',
     title: 'UX Designer',
     subtitle: 'I craft intuitive digital experiences that bridge the gap between user needs and business goals. With a human-centered approach, I transform complex problems into elegant, accessible solutions.',
     cta: 'View My Work',
@@ -124,7 +124,7 @@ const en: Translations = {
     linkedin: 'Connect on LinkedIn',
   },
   footer: {
-    copyright: '© 2026 Kathrin Möckl. All rights reserved.',
+    copyright: '© 2026 {Name}. All rights reserved.',
     madeWith: 'Designed with passion',
   },
 };
@@ -138,7 +138,7 @@ const de: Translations = {
   },
   hero: {
     greeting: 'Hallo, ich bin',
-    name: 'Kathrin Möckl',
+    name: '{Name}',
     title: 'UX Designerin',
     subtitle: 'Ich gestalte intuitive digitale Erlebnisse, die Nutzerbedürfnisse und Geschäftsziele verbinden. Mit einem menschzentrierten Ansatz verwandle ich komplexe Probleme in elegante, zugängliche Lösungen.',
     cta: 'Meine Arbeiten ansehen',
@@ -206,7 +206,7 @@ const de: Translations = {
     linkedin: 'Auf LinkedIn vernetzen',
   },
   footer: {
-    copyright: '© 2026 Kathrin Möckl. Alle Rechte vorbehalten.',
+    copyright: '© 2026 {Name}. Alle Rechte vorbehalten.',
     madeWith: 'Mit Leidenschaft gestaltet',
   },
 };

@@ -10,7 +10,7 @@ export default function Contact() {
       <p className="contact__desc">{t.contact.description}</p>
       <div className="contact__buttons">
         <a
-          href="mailto:kathrin.moeckl@example.com"
+          href="mailto:{email}"
           className="contact__btn contact__btn--primary"
         >
           ✉ {t.contact.email}

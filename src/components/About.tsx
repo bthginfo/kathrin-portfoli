@@ -14,7 +14,7 @@ export default function About() {
             <div className="about__image-frame">
               <img
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=520&h=640&fit=crop&crop=face"
-                alt="Kathrin Möckl"
+                alt={t.hero.name}
                 className="about__image-photo"
               />
             </div>

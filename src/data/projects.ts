@@ -3,142 +3,6 @@ import { Language } from '../i18n/translations';
 export interface ProcessStep {
   title: string;
   description: string;
-  icon: string;
-}
-
-export interface Project {
-  id: string;
-  title: string;
-  category: string;
-  thumbnail: string;
-  color: string;
-  year: string;
-  overview: string;
-  role: string;
-  duration: string;
-  team: string;
-  client: string;
-  tools: string[];
-  challenge: string;
-  challengeDetails: string[];
-  researchInsights: string[];
-  process: ProcessStep[];
-  solution: string;
-  solutionDetails: string[];
-  keyFeatures: { title: string; description: string }[];
-  results: string[];
-  testimonial?: { quote: string; author: string; role: string };
-  learnings: string[];
-  gallery: { src: string; caption: string }[];
-  nextProject?: string;
-}
-
-type ProjectData = Record<Language, Project[]>;
-
-export const projects: ProjectData = {
-  en: [
-    {
-      id: 'finflow',
-      title: 'FinFlow — Banking App Redesign',
-      category: 'Mobile App · Fintech',
-      thumbnail: 'https://images.unsplash.com/photo-1563986768609-322da13575f2?w=800&h=520&fit=crop',
-      color: '#6C63FF',
-      year: '2025',
-      overview: 'A complete redesign of a digital banking application focused on simplifying complex financial tasks for everyday users. This project transformed a struggling fintech product into a best-in-class mobile banking experience.',
-      role: 'Lead UX Designer',
-      duration: '4 months',
-      team: '2 UX designers, 1 UI designer, 4 developers, 1 PM',
-      client: 'FinFlow Technologies GmbH',
-      tools: ['Figma', 'Maze', 'Miro', 'Principle', 'Hotjar', 'Jira'],
-      challenge: 'The existing banking app had a 62% task abandonment rate for transfers and bill payments. Users found the navigation confusing and the information architecture overwhelming, leading to frequent support calls and a declining user base.',
-      challengeDetails: [
-        'The app had accumulated 3 years of feature bloat without a cohesive design strategy',
-        'Navigation relied on a complex hamburger menu with 5 levels of nesting',
-        'Critical tasks like transfers required 8+ steps to complete',
-        'The onboarding flow had a 73% drop-off rate at the identity verification step',
-        'Accessibility was largely ignored, excluding users with visual impairments',
-      ],
-      researchInsights: [
-        'Conducted 24 in-depth user interviews across 4 demographic segments',
-        '87% of users only used 3 core features but had to navigate past 20+ menu items',
-        'Contextual inquiry revealed users often switched to competitor apps mid-task out of frustration',
-        'Card sorting workshop with 40 participants redefined the information architecture',
-        'Competitive analysis of 8 banking apps revealed industry best practices for transaction flows',
-      ],
-      process: [
-        { title: 'Discovery', description: 'Stakeholder interviews, user research, competitive analysis, and heuristic evaluation of the existing app.', icon: '🔍' },
-        { title: 'Define', description: 'Persona development, journey mapping, problem framing, and opportunity identification through affinity diagramming.', icon: '🎯' },
-        { title: 'Ideate', description: 'Design sprints, crazy 8s sketching sessions, and concept validation with lo-fi prototypes tested with 12 users.', icon: '💡' },
-        { title: 'Design', description: 'High-fidelity UI design, micro-interaction design, design system creation, and iterative usability testing.', icon: '🎨' },
-        { title: 'Validate', description: 'Remote usability testing with 30 participants, A/B testing of key flows, and accessibility audit.', icon: '✅' },
-        { title: 'Deliver', description: 'Developer handoff with detailed specs, animation guidelines, and ongoing design QA during implementation.', icon: '🚀' },
-      ],
-      solution: 'Through extensive user research and iterative design, I redesigned the entire information architecture around user mental models. The new design centers on a personalized dashboard, simplified navigation with smart categorization, and a streamlined transaction flow.',
-      solutionDetails: [
-        'Introduced a tab-based navigation replacing the nested hamburger menu, reducing navigation depth from 5 to 2 levels',
-        'Designed a smart search with natural language processing that anticipates user intent',
-        'Created a step-by-step transaction wizard with progress indicators and inline validation',
-        'Built a comprehensive design system with 120+ components ensuring consistency across 45 screens',
-        'Implemented progressive disclosure to show only relevant information at each step',
-      ],
-      keyFeatures: [
-        { title: 'Smart Dashboard', description: 'AI-powered personalized home screen that surfaces the most relevant accounts, recent transactions, and quick actions based on user behavior patterns.' },
-        { title: 'One-Tap Transfers', description: 'Streamlined transfer flow that remembers frequent recipients and amounts, allowing repeat transactions with a single confirmation.' },
-        { title: 'Visual Budgeting', description: 'Interactive spending visualization with category breakdowns, trend analysis, and smart alerts for unusual spending patterns.' },
-        { title: 'Biometric Security', description: 'Seamless authentication flow using Face ID and fingerprint, with graceful fallback to PIN for accessibility.' },
-      ],
-      results: [
-        'Task completion rate increased from 38% to 91%',
-        'Support calls reduced by 55% in the first month',
-        'App Store rating improved from 2.8 to 4.6 stars',
-        'User satisfaction score (CSAT) increased by 67%',
-        'Onboarding completion rate improved from 27% to 84%',
-        'Average session time increased by 34%, indicating higher engagement',
-      ],
-      testimonial: {
-        quote: 'Kathrin transformed our app from our biggest liability into our strongest competitive advantage. Her research-driven approach uncovered insights we never would have found on our own.',
-        author: 'Marcus Weber',
-        role: 'CPO, FinFlow Technologies',
-      },
-      learnings: [
-        'Early and continuous user involvement is crucial — even "obvious" design decisions need validation',
-        'Design system investment pays off exponentially as the product scales',
-        'Financial UX requires extra care around error states and confirmation patterns to build trust',
-      ],
-      gallery: [
-        { src: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=700&fit=crop', caption: 'Research & Discovery — User interview sessions and affinity mapping' },
-        { src: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=1200&h=700&fit=crop', caption: 'Wireframing — Low-fidelity wireframes exploring navigation patterns' },
-        { src: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=1200&h=700&fit=crop', caption: 'Final Designs — High-fidelity screens showing the new dashboard and transfer flow' },
-      ],
-      nextProject: 'healthmate',
-    },
-    {
-      id: 'healthmate',
-      title: 'HealthMate — Wellness Platform',
-      category: 'Web App · Healthcare',
-      thumbnail: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=520&fit=crop',
-      color: '#00C9A7',
-      year: '2025',
-      overview: 'Designing an accessible wellness platform that connects patients with healthcare providers through seamless telemedicine experiences. A project where inclusive design wasn\'t just a nice-to-have — it was the core mission.',
-      role: 'Senior UX Designer',
-      duration: '6 months',
-      team: '3 UX designers, 2 developers, 1 accessibility specialist, 1 PM',
-      client: 'HealthMate Inc.',
-      tools: ['Figma', 'UserTesting', 'Hotjar', 'Notion', 'axe DevTools', 'VoiceOver'],
-      challenge: 'Healthcare providers needed a platform that could handle diverse patient needs while maintaining strict data privacy compliance. The existing system had poor accessibility scores and effectively excluded users with disabilities from accessing critical health services.',
-      challengeDetails: [
-        'Previous platform scored 34/100 on Lighthouse accessibility audit',
-        'Patient onboarding took an average of 12 minutes with a 45% abandonment rate',
-        'No screen reader support, excluding an estimated 15% of the target user base',
-        'Appointment booking required 6 separate page loads with no progress indication',
-        'Mobile experience was an afterthought — 62% of patients accessed via smartphone',
-      ],
-      researchInsights: [
-        'Conducted inclusive research sessions with 32 participants including users with visual, motor, and cognitive disabilities',
-        'Discovered that 40% of elderly patients abandoned the platform due to small touch targets and low contrast text',
-        'Healthcare providers spent an average of 8 minutes per patient on administrative tasks that could be automated',
-        'Diary study over 2 weeks revealed that patients preferred evening and weekend appointments but the booking flow assumed business hours',
-        'Benchmark testing against 6 competing telehealth platforms identified key differentiation opportunities in accessibility',
       ],
       process: [
         { title: 'Audit & Research', description: 'Comprehensive accessibility audit, inclusive user research with 32 participants, and stakeholder alignment workshops.', icon: '🔍' },
@@ -246,7 +110,7 @@ export const projects: ProjectData = {
         'Return rate decreased from 32% to 18% thanks to improved product info',
       ],
       testimonial: {
-        quote: 'The redesign paid for itself within 6 weeks. Kathrin\'s data-driven approach meant we weren\'t guessing — every design decision was backed by evidence.',
+        quote: 'The redesign paid for itself within 6 weeks. {Name}\'s data-driven approach meant we weren\'t guessing — every design decision was backed by evidence.',
         author: 'Elena Richter',
         role: 'Head of E-Commerce, ShopScape',
       },
@@ -321,7 +185,7 @@ export const projects: ProjectData = {
         'Platform was featured in EdTech Magazine\'s "Top 10 Learning Platforms of 2024"',
       ],
       testimonial: {
-        quote: 'Kathrin didn\'t just design an app — she designed a learning experience. The gamification feels natural, not gimmicky, and the micro-learning approach has genuinely changed how I study.',
+        quote: '{Name} didn\'t just design an app — they designed a learning experience. The gamification feels natural, not gimmicky, and the micro-learning approach has genuinely changed how I study.',
         author: 'Dr. Thomas Hoffmann',
         role: 'Dean of Digital Learning, TechAcademy',
       },
@@ -398,8 +262,8 @@ export const projects: ProjectData = {
         'Durchschnittliche Sitzungsdauer um 34% gestiegen',
       ],
       testimonial: {
-        quote: 'Kathrin hat unsere App von unserer größten Schwäche in unseren stärksten Wettbewerbsvorteil verwandelt. Ihr forschungsgetriebener Ansatz hat Erkenntnisse zutage gefördert, die wir allein nie gefunden hätten.',
-        author: 'Marcus Weber',
+        quote: '{Name} hat unsere App von unserer größten Schwäche in unseren stärksten Wettbewerbsvorteil verwandelt. Der forschungsgetriebene Ansatz hat Erkenntnisse zutage gefördert, die wir allein nie gefunden hätten.',
+        author: 'Max Mustermann',
         role: 'CPO, FinFlow Technologies',
       },
       learnings: [
@@ -548,7 +412,7 @@ export const projects: ProjectData = {
         'Retourenquote von 32% auf 18% durch bessere Produktinfos gesunken',
       ],
       testimonial: {
-        quote: 'Das Redesign hat sich innerhalb von 6 Wochen amortisiert. Kathrins datengetriebener Ansatz bedeutete, dass wir nicht raten mussten — jede Designentscheidung war durch Evidenz belegt.',
+        quote: 'Das Redesign hat sich innerhalb von 6 Wochen amortisiert. Der datengetriebene Ansatz bedeutete, dass wir nicht raten mussten — jede Designentscheidung war durch Evidenz belegt.',
         author: 'Elena Richter',
         role: 'Head of E-Commerce, ShopScape',
       },
@@ -623,7 +487,7 @@ export const projects: ProjectData = {
         'Plattform im EdTech Magazine als "Top 10 Lernplattformen 2024" geführt',
       ],
       testimonial: {
-        quote: 'Kathrin hat nicht einfach eine App gestaltet — sie hat ein Lernerlebnis geschaffen. Die Gamification fühlt sich natürlich an, nicht aufgesetzt, und der Micro-Learning-Ansatz hat wirklich verändert, wie ich lerne.',
+        quote: '{Name} hat nicht einfach eine App gestaltet — sie hat ein Lernerlebnis geschaffen. Die Gamification fühlt sich natürlich an, nicht aufgesetzt, und der Micro-Learning-Ansatz hat wirklich verändert, wie ich lerne.',
         author: 'Dr. Thomas Hoffmann',
         role: 'Dekan für Digitales Lernen, TechAcademy',
       },

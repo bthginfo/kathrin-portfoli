@@ -75,7 +75,7 @@ export default function Hero() {
           <span className={`hero__greeting-text${greetingFade ? ' hero__greeting-text--visible' : ''}`}>
             {GREETINGS[greetingIndex].text}
           </span>
-          <span className="hero__greeting-comma">, I'm</span>
+          <span className="hero__greeting-comma">,</span>
         </div>
         <h1 className="hero__name">
           <span className="hero__name-line">{t.hero.name}</span>
@@ -97,12 +97,7 @@ export default function Hero() {
                 <line x1="12" y1="5" x2="12" y2="19" /><polyline points="19 12 12 19 5 12" />
               </svg>
             </a>
-            <a href="/kathrin-moeckl-cv.pdf" download className="hero__cta hero__cta--secondary">
-              <span>Download CV</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
-            </a>
+            {/* CV Download Button entfernt, Studierende können später selbst eine Datei verlinken */}
           </div>
           <div className="hero__scroll-hint">
             <div className="hero__scroll-mouse">
